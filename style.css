@@ -1,11 +1,8 @@
 /* Define the custom font using @font-face */
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('SpringLake/springlake.script.otf') format('otf'),
-    url('SpringLake/springlake.script.ttf') format('truetype');
-  /* You can specify multiple formats for better browser support */
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'ChineseFont'; /* The name you are assigning to this font */
+  src: url('hsf/HanyiSentyFoundation Regular/HanyiSentyFoundation Regular.ttf') format('truetype');
+  /* You can specify other formats here for better browser support, like 'woff' or 'woff2' */
 }
 
 /* Global Styles */
@@ -318,10 +315,10 @@ body {
 
 
 button.rsvp-button {
-  font-family: 'MyCustomFont';
-  padding: 15px 45px;
+  font-family: 'ChineseFont';
+  padding: 10px 40px;
   background: #f3b182;
-  font-size: 17px;
+  font-size: 30px;
   color: #000000;
   cursor: pointer;
   border: 1px solid #f3b182;
@@ -701,6 +698,16 @@ button.rsvp-button:hover {
     box-shadow: 0 0 15px 10px rgba(255, 153, 51, 0.6);
   }
 
+  .rsvp-button-container {
+    top: 72%;
+  }
+  
+
+  button.rsvp-button {
+    padding: 7px 37px;
+    font-size: 20px;
+  }
+
 
 }
 
@@ -750,6 +757,13 @@ button.rsvp-button:hover {
     background-color: rgba(255, 183, 77, 0.9);
     box-shadow: 0 0 15px 10px rgba(255, 153, 51, 0.6);
   }
+
+
+}
+
+
+@media (max-width: 380px) {
+
 
 
 }
