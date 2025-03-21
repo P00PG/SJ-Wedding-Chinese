@@ -1,4 +1,4 @@
-/* Define the custom font using @font-face */
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('SpringLake/springlake.script.otf') format('otf'),
@@ -62,8 +62,9 @@ body {
 
 
 .section-one {
-  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Header.jpg'); /* First section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Header.jpg');
 }
+
 
 .section-two {
   background-image: url('./images/What to Wear.jpg'); /* Second section background */
