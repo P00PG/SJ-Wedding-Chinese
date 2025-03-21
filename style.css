@@ -62,24 +62,24 @@ body {
 
 
 .section-one {
-  background-image: url('./images/Header.jpg'); /* First section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Header.jpg');
 }
 
 .section-two {
-  background-image: url('./images/What to Wear.jpg'); /* Second section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/What%20to%20Wear.jpg');
 }
-
 .section-three {
-  background-image: url('./images/How to get there.jpg'); /* Third section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/How%20to%20get%20there.jpg');
 }
 
 .section-four {
-  background-image: url('./images/Schdule.jpg'); /* Fourth section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Schdule.jpg');
 }
 
 .section-five {
-  background-image: url('./images/Rsvp.jpg'); /* Fourth section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Rsvp.jpg');
 }
+
 
 .audio-controls {
   position: absolute;
@@ -227,10 +227,10 @@ body {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  width: 3.5px;
-  height: 1.5px;
+  width: 5px;
+  height: 3px;
   background-color: rgba(255, 255, 0, 0.685);
-  box-shadow: 0 0 15px 18px rgba(255, 255, 0, 0.548);
+  box-shadow: 0 0 15px 10px rgba(255, 255, 0, 0.548);
   opacity: 0;
   /* Separate the animations and delay the movement */
   animation:
@@ -242,10 +242,10 @@ body {
 
 /* Orange firefly */
 .orange-firefly {
-  width: 3.5px;
-  height: 1.5px;
+  width: 5px;
+  height: 3px;
   background-color: rgba(255, 183, 77, 0.9);
-  box-shadow: 0 0 15px 18px rgba(255, 153, 51, 0.6);
+  box-shadow: 0 0 15px 10px rgba(255, 153, 51, 0.6);
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
@@ -650,7 +650,6 @@ button.rsvp-button:hover {
     background-image: url('./images/S&JMobile\ -\ 1024px/Rsvp.jpg'); /* Fourth section background */
   }
 
-
   .modal-content {
     width: 100%;
     /* Reduce the width to 95% on small screens */
@@ -668,64 +667,47 @@ button.rsvp-button:hover {
 @media (max-width: 768px) {
 
   .section-one {
-    background-image: url('./images/S&JMobile\ -\ 768px/Header.jpg'); /* First section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Header.jpg'); /* First section background */
   }
   
   .section-two {
-    background-image: url('./images/S&JMobile\ -\ 768px/What\ to\ Wear.jpg'); /* Second section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/SJMobile_768px/What_to_Wear.jpg'); /* Second section background */
   }
   
   .section-three {
-    background-image: url('./images/S&JMobile\ -\ 768px/How\ to\ get\ there.jpg'); /* Third section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/How%20to%20get%20there.jpg'); /* Third section background */
   }
   
   .section-four {
-    background-image: url('./images/S&JMobile\ -\ 768px/Schdule.jpg'); /* Fourth section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Schdule.jpg'); /* Fourth section background */
   }
   
   .section-five {
-    background-image: url('./images/S&JMobile\ -\ 768px/Rsvp.jpg'); /* Fourth section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Rsvp.jpg'); /* Fourth section background */
   }
-
-
-  .firefly {
-    width: 2.5px;
-    height: 1.5px;
-    background-color: rgba(255, 255, 0, 0.685);
-    box-shadow: 0 0 15px 15px rgba(255, 255, 0, 0.548);
-    
-  }
-
-  .orange-firefly {
-    width: 2.5px;
-    height: 1.5px;
-    background-color: rgba(255, 183, 77, 0.9);
-    box-shadow: 0 0 15px 15px rgba(255, 153, 51, 0.6);
-  }
-
 
 }
 
 @media (max-width: 480px) {
 
   .section-one {
-    background-image: url('./images/S&JMobile\ -\ 480px/Header.jpg'); /* First section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Header.jpg'); /* First section background */
   }
   
   .section-two {
-    background-image: url('./images/S&JMobile\ -\ 480px/What\ to\ Wear.jpg'); /* Second section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/SJMobile_768px/What_to_Wear.jpg'); /* Second section background */
   }
   
   .section-three {
-    background-image: url('./images/S&JMobile\ -\ 480px/How\ to\ get\ there.jpg'); /* Third section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/How%20to%20get%20there.jpg'); /* Third section background */
   }
   
   .section-four {
-    background-image: url('./images/S&JMobile\ -\ 480px/Schdule.jpg'); /* Fourth section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Schdule.jpg'); /* Fourth section background */
   }
   
   .section-five {
-    background-image: url('./images/S&JMobile\ -\ 480px/Rsvp.jpg'); /* Fourth section background */
+    background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Rsvp.jpg'); /* Fourth section background */
   }
 
   .modal-content {
@@ -736,21 +718,6 @@ button.rsvp-button:hover {
   .modal iframe {
     height: 500px;
     /* Adjust iframe height for smaller screens */
-  }
-
-  .firefly {
-    width: 2.5px;
-    height: 1.5px;
-    background-color: rgba(255, 255, 0, 0.685);
-    box-shadow: 0 0 15px 10px rgba(255, 255, 0, 0.548);
-    
-  }
-
-  .orange-firefly {
-    width: 2.5px;
-    height: 1.5px;
-    background-color: rgba(255, 183, 77, 0.9);
-    box-shadow: 0 0 15px 10px rgba(255, 153, 51, 0.6);
   }
 
 }
