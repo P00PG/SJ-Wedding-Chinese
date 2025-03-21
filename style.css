@@ -62,23 +62,23 @@ body {
 
 
 .section-one {
-  background-image: url('./images/Header.jpg'); /* First section background */
+  background-image: url('/images/Header.jpg'); /* First section background */
 }
 
 .section-two {
-  background-image: url('./images/What to Wear.jpg'); /* Second section background */
+  background-image: url('/images/What to Wear.jpg'); /* Second section background */
 }
 
 .section-three {
-  background-image: url('./images/How to get there.jpg'); /* Third section background */
+  background-image: url('/images/How to get there.jpg'); /* Third section background */
 }
 
 .section-four {
-  background-image: url('./images/Schdule.jpg'); /* Fourth section background */
+  background-image: url('/images/Schdule.jpg'); /* Fourth section background */
 }
 
 .section-five {
-  background-image: url('./images/Rsvp.jpg'); /* Fourth section background */
+  background-image: url('/images/Rsvp.jpg'); /* Fourth section background */
 }
 
 .audio-controls {
