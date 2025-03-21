@@ -67,19 +67,19 @@ body {
 
 
 .section-two {
-  background-image: url('./images/What to Wear.jpg'); /* Second section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/What%20to%20Wear.jpg');
 }
 
 .section-three {
-  background-image: url('./images/How to get there.jpg'); /* Third section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/How%20to%20get%20there.jpg');
 }
 
 .section-four {
-  background-image: url('./images/Schdule.jpg'); /* Fourth section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Schdule.jpg');
 }
 
 .section-five {
-  background-image: url('./images/Rsvp.jpg'); /* Fourth section background */
+  background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/Rsvp.jpg');
 }
 
 .audio-controls {
