@@ -1,9 +1,4 @@
-window.addEventListener("scroll", function () {
-    document.querySelectorAll(".parallax").forEach((el) => {
-        let scrollPos = window.scrollY;
-        el.style.transform = `translateY(${scrollPos * 0.3}px)`;
-    });
-});
+
 
 //firefly script
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.innerHeight <= 1080;
 
     if (isMobile) {
-        maxFireflies = 85;
+        maxFireflies = 65;
     }
 
     else if (isLaptop) {
@@ -101,14 +96,18 @@ function GameLoop() {
 
 // Function to check if the clicked element is an interactive button
 function shouldIgnoreClick(target) {
-    return target.closest('.rsvp-button, .transparent-trigger1,.transparent-trigger2, .close-btn, .modal-content');
-}
+    return target.closest(
+      '.rsvp-button, .pswp-gallery, .close-btn, .modal-content, .pswp, .pswp__img, .pswp__button, .pswp__container'
+    );
+  }
+  
 
 // Wait for user interaction to toggle play/pause
 document.body.addEventListener('click', (event) => {
-    if (shouldIgnoreClick(event.target)) {
-        return; // Ignore clicks on RSVP, modal buttons, and modal content
-    }
+    // Stop audio toggling if clicked inside PhotoSwipe
+    if (event.target.closest('.pswp')) return;
+
+    if (shouldIgnoreClick(event.target)) return;
 
     if (myAudio.paused) {
         if (!isAudioPlayed) {
@@ -121,6 +120,7 @@ document.body.addEventListener('click', (event) => {
         myAudio.pause();
     }
 });
+
 
 
 // Get the modal and the button
@@ -146,18 +146,6 @@ window.onclick = function (event) {
 }
 
 
-// Open the correct image modal when a button is clicked
-document.getElementById("button1").addEventListener("click", function () {
-    document.getElementById("imageModal1").style.display = "block";
-});
 
-document.getElementById("button2").addEventListener("click", function () {
-    document.getElementById("imageModal2").style.display = "block";
-});
-
-// Close function for image modals
-function closeImageModal(modalNumber) {
-    document.getElementById("imageModal" + modalNumber).style.display = "none";
-}
 
 
