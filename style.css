@@ -8,7 +8,8 @@
 
 /* Global Styles */
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -520,6 +521,41 @@ button.rsvp-button:hover {
   transform: translateX(350px) translateY(10px) rotate(-10deg);
 }
 
+.mobile-only {
+  display: none;
+  /* default hidden */
+  position: relative !important;
+  /* force fixed */
+  width: 150px;
+  height: 150px;
+  top: -235px;
+  left: 29%;
+  z-index: 9999;
+  background: transparent;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 1s ease;
+  /* fade duration 1 second */
+  /* other styles */
+}
+
+/* Add a class to trigger fade out */
+.mobile-only.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  /* so it won't interfere after fading */
+}
+
+/* Bonus: Make sure lottie-player fills container */
+.mobile-only lottie-player {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  pointer-events: none;
+}
+
+
+
 
 
 /*laptops*/
@@ -574,6 +610,10 @@ button.rsvp-button:hover {
 
 /*moblie*/
 @media (max-width: 1024px) {
+
+  .mobile-only {
+    display: block;
+  }
 
   .section-one {
     background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%201024px/Header.jpg');
@@ -660,168 +700,19 @@ button.rsvp-button:hover {
     transform: translateX(-70px) translateY(350px) rotate(-10deg);
   }
 
-  /*Swipe animation*/
-  .swipe-hint {
-    position: fixed;
-    top: 50%;
-    left: 70%;
-    background: rgba(0, 0, 0, 0);
-    font-family: 'ChineseFont';
-    color: #fff;
-    /* white fill */
-    text-shadow:
-      -2px -2px 0 #000,
-      /* top-left */
-      2px -2px 0 #000,
-      /* top-right */
-      -2px 2px 0 #000,
-      /* bottom-left */
-      2px 2px 0 #000;
-    /* bottom-right */
-    font-size: 50px;
-    z-index: 999999;
-    display: none;
-    /* Hidden by default */
-    text-align: center;
-    will-change: transform;
-    backface-visibility: hidden;
-  }
 
-  /* 1. Fade In */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* 2. Fade Out */
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
-
-
-  @keyframes sway {
-    0% {
-      transform: translateX(0);
-    }
-
-    25% {
-      transform: translateX(-10px);
-    }
-
-    50% {
-      transform: translateX(0);
-    }
-
-    75% {
-      transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  /* Apply when fading in */
-  .swipe-hint.fade-in {
-    animation: fadeIn 0.5s forwards;
-  }
-
-  /* Swipe animation */
-  .swipe-hint {
-    position: fixed;
-    top: 75%;
-    left: 40%;
-    background: rgba(0, 0, 0, 0);
-    font-family: 'ChineseFont';
-    color: #fff;
-    text-shadow:
-      -2px -2px 0 #000,
-      /* top-left */
-      2px -2px 0 #000,
-      /* top-right */
-      -2px 2px 0 #000,
-      /* bottom-left */
-      2px 2px 0 #000;
-    /* bottom-right */
-    font-size: 65px;
-    z-index: 999999;
-    display: none;
-    /* Hidden by default */
-    text-align: center;
-    will-change: transform;
-    backface-visibility: hidden;
-  }
-
-  /* Fade-in animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* Fade-out animation */
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
-
-  /* Sway animation */
-  @keyframes sway {
-    0% {
-      transform: translateX(0);
-    }
-
-    25% {
-      transform: translateX(-10px);
-    }
-
-    50% {
-      transform: translateX(0);
-    }
-
-    75% {
-      transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  /* Apply fade-in animation */
-  .swipe-hint.fade-in {
-    animation: fadeIn 0.5s forwards;
-  }
-
-  /* Apply sway animation that loops infinitely */
-  .swipe-hint.swaying {
-    animation: sway 1.5s linear infinite, fadeOut 2s forwards 3.5s;
-    /* Fade-out starts after 6 seconds */
-  }
 
 }
 
 @media (max-width: 768px) {
+
+
+  .mobile-only {
+    width: 100px;
+    height: 100px;
+    top: -210px;
+    left: 27%;
+  }
 
   .section-one {
     background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20768px/Header.jpg');
@@ -894,14 +785,16 @@ button.rsvp-button:hover {
   }
 
 
-
-
-
-
-
 }
 
 @media (max-width: 480px) {
+
+  .mobile-only {
+    width: 80px;
+    height: 80px;
+    top: -135px;
+    left: 29%;
+  }
 
   .section-one {
     background-image: url('https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/S%26JMobile%20-%20480px/Header.jpg');
@@ -973,13 +866,6 @@ button.rsvp-button:hover {
     transform: translateX(-60px) translateY(210px) rotate(-10deg);
   }
 
-  /*Swipe animation*/
-  .swipe-hint {
-    font-size: 45px;
-    top: 65%;
-    left: 40%;
-  }
-
 }
 
 @media (max-width: 380px) {
@@ -1003,13 +889,12 @@ button.rsvp-button:hover {
     transform: translateX(-20px) translateY(170px) rotate(-10deg);
   }
 
-  /*Swipe animation*/
-  .swipe-hint {
-    font-size: 40px;
-    top: 70%;
-    left: 40%;
+  .mobile-only {
+    width: 50px;
+    height: 50px;
+    top: -100px;
+    left: 25%;
   }
-
 
 
 

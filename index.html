@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./PhotoSwipe/photoswipe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </head>
 
@@ -30,6 +30,17 @@
             <source src="./music/LWA.mp3" type="audio/mpeg">
         </audio>
 
+            <div id="zoomHint" class="mobile-only">
+  <lottie-player 
+    id="zoomLottie"
+    src="Animation/pinching.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay>
+  </lottie-player>
+</div>
+
     </section>
 
 
@@ -41,9 +52,6 @@
                 <img src="https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/ModalImages/Transaparent.png
                 " alt="What to Wear">
             </a>
-            <!-- Hidden second image for zoom -->
-            <a href="https://raw.githubusercontent.com/P00PG/SJ-Wedding-Chinese/main/Images/ModalImages/NoteModal.png" data-pswp-width="600" data-pswp-height="450"
-                style="display: none;"></a>
         </div>
     </section>
 
@@ -131,56 +139,9 @@
             pswpModule: () => PhotoSwipe
         });
 
-        let hintShown = false;
-
-        lightbox.on('change', () => {
-            const currSlide = lightbox.pswp.currSlide;
-            const origLink = currSlide?.data?.element;
-            const isFromSectionTwo = origLink?.closest('.section-two');
-
-            if (isFromSectionTwo && !hintShown) {
-                hintShown = true;
-
-                // Get or create the hint
-                const pswpContainer = document.querySelector('.pswp');
-                let hint = document.getElementById('swipeHint');
-                if (!hint) {
-                    hint = document.createElement('div');
-                    hint.id = 'swipeHint';
-                    hint.className = 'swipe-hint';
-                    hint.innerHTML = '<span>← Swipe →</span>';
-                    pswpContainer.appendChild(hint);
-                }
-
-                // Show the swipe hint and trigger fade-in
-                hint.style.display = 'block';
-                hint.classList.add('fade-in');
-
-                // After fade-in, start the swaying animation with fade-out after delay
-                setTimeout(() => {
-                    hint.classList.remove('fade-in');
-                    hint.classList.add('swaying');
-                }, 350);  // Wait until fade-in finishes before starting sway animation
-            }
-        });
-
-        // Reset the hint when closing the lightbox
-        lightbox.on('close', () => {
-            hintShown = false;
-
-            const hint = document.getElementById('swipeHint');
-            if (hint) {
-                hint.classList.remove('swaying');
-                hint.style.display = 'none';
-            }
-        });
-
-
         lightbox.init();
     </script>
-    <div class="swipe-hint" id="swipeHint" style="display: none;">
-        <span>滑动 > </span>
-    </div>
+
 
 </body>
 

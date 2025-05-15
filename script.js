@@ -145,6 +145,23 @@ window.onclick = function (event) {
     }
 }
 
+window.addEventListener("load", function () {
+  const zoomHint = document.getElementById("zoomHint");
+  const isMobile = window.innerWidth <= 1024;
+
+  if (isMobile && zoomHint) {
+    setTimeout(() => {
+      zoomHint.classList.add("fade-out");
+
+      // Wait for transition to finish before hiding completely
+      zoomHint.addEventListener("transitionend", () => {
+        zoomHint.style.display = "none";
+      }, { once: true });
+    }, 2500); // start fade out after 2 seconds
+  }
+});
+
+
 
 
 
